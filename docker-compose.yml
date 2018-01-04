@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/code
+    command: node --inspect=0.0.0.0:5858 /code/bin/www
+    ports:
+       - "3000:3000"
+       - "5858:5858"
+       - "5859:5859"
+       - "5860:5860"
+       - "5861:5861"
+       - "5862:5862"
